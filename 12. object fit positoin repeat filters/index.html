@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object fit and position</title>
+    <style>
+        body{
+            display: flex;
+        }
+        .container{
+            margin: 4px;
+            border: 3px solid black;
+            width: 600px;
+            height: 400px;
+            background-color: azure;
+        }
+
+        img{
+            width: 600px;
+            height: 400px;
+            object-fit: cover;
+            /* object-fit: contain; */
+            /* object-position: center center; */
+            /* object-fit: scale-down; */
+
+            /* filter: blur(5px); */
+            filter: brightness(122%);
+            /* filter: invert(10); */
+        }
+
+        .bg{
+            background-image: url("https://www.topgear.com/sites/default/files/images/big-read/carousel/2016/08/1366a72eb21eacee226ff258abccb290/row_8819.jpg");
+
+            /* background-attachment: fixed; */
+            background-position: center center;
+            background-size: cover;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://www.topgear.com/sites/default/files/images/big-read/carousel/2016/08/1366a72eb21eacee226ff258abccb290/row_8819.jpg" alt="">
+    </div>
+    <div class="container bg"></div>
+</body>
+</html>

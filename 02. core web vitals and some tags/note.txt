@@ -1,0 +1,8 @@
+CORE WEB VITALS:
+seo (search engine optimization)
+cls (cumulative layout shift)
+lcp (largest contentful paint)
+fid (first input delay)
+
+
+use TITLE AND META DESCRIPION tag for best practises.

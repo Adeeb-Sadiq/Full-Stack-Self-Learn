@@ -1,0 +1,10 @@
+div > p:first-child {
+    background-color: teal;
+    color: white;
+}
+
+p {
+    padding: 2px;
+    background-color: darkred;
+    color: aqua;    
+}

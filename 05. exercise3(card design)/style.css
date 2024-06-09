@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Scribble&display=swap');
+
+* {
+    margin: 2px;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+.container {
+    width: 400px;
+    margin: auto;
+    margin-top: 70px;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+.pic {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.hashtags {
+    display: flex;
+}
+
+.helement {
+    margin: 2px;
+    font-size: 16px;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.heading {
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.about {
+    text-align: justify;
+}
+
+.rmb {
+    width: 50%;
+    background-color: skyblue;
+    text-align: center;
+    margin: 5px auto;
+    padding: 10px;
+    border-radius: 20px;
+}
