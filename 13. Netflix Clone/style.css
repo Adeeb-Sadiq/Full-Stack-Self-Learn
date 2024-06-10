@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+body {
+    background-color: black;
+    width: 100vw;
+}
+
+
+.partition {
+    height: 11px;
+    background-color: #101010;
+}
+
+.welcome {
+    background-image: url(assets/images/netflix-background.jpg);
+    padding-bottom: 5px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+}
+
+.red-btn {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+.welcome>.box {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.welcome * {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+nav {
+    width: 80vw;
+    height: 100px;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .navButtons {
+    display: flex;
+    gap: 20px;
+}
+
+nav img {
+    width: 120px;
+}
+
+nav select {
+    background-color: transparent;
+    outline: none;
+    border: 1px solid white;
+    padding: 2px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+nav button {
+    font-size: 12px;
+    padding: 2px 10px;
+    font-weight: bolder;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    border: none;
+    
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 180px;
+    gap: 10px;
+}
+
+.main> :nth-child(1) {
+    font-weight: bolder;
+    font-size: 47px;
+}
+
+.main> :nth-child(2) {
+    font-size: 22px;
+}
+
+.main> :nth-child(3){
+    font-size: 18px;
+}
+
+.main .email {
+    margin-top: 10px;
+    gap: 5px;
+    width: 50%;
+}
+
+.main input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background: transparent;
+    font-size: 16px;
+    width: 50%;
+    height: 47px;
+}
+
+.main button {
+    height: 47px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+section {
+    display: flex;
+    align-items: center;
+    width: 80vw;
+    margin: auto;
+    position: relative;
+    justify-content: space-around;
+    padding-bottom: 60px;
+}
+
+
+.section-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-text :nth-child(1){
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.section-text :nth-child(2){
+    font-weight: 400;
+    font-size: 21px;
+}
+
+.first-display {
+    position: relative;
+    left: 55px;
+}
+
+.first-display img {
+    position: relative;
+    z-index: 2;
+}
+
+.first-display video {
+    position: absolute;
+    top: 91px;
+    left: 86px;
+}
+
+.second-display img {
+    position: relative;
+}
+
+.second-pic {
+    border: 1px solid gray;
+    position: absolute;
+    left: 8.9%;
+    top: 57%;
+    display: flex;
+    align-items: center;
+    padding: 11px 30px;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.third video {
+    z-index: 20;
+}  
+
+
+.faqs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faqs > h1 {
+    font-weight: bolder;
+    font-size: 48px;
+    margin-top: 60px;
+}
+
+.faqs .question {
+    background-color: #101010;
+    width: 80vw;
+    margin: 5px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 23px;
+    padding: 20px;
+}
+
+.faqs > span {
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.faqs .email {
+    margin: 20px;
+    gap: 5px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.email input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background: transparent;
+    font-size: 16px;
+    width: 50%;
+    height: 47px;
+}
+
+.email button {
+    height: 47px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+.more-info {
+    width: 80vw;
+    margin: 50px;
+}
+
+.links {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 1400px) {
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px;
+        align-items: center;
+        justify-content: center ;
+    }
+
+    section > * {
+        margin: 10px;
+    }
+
+    .main .email {
+        width: 80vw;
+    }
+
+    .main .email input {
+        width: 50vw;
+    }
+    .email button {
+        margin-top: 10px;
+        width: 50vw;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section * {
+        margin: 0;padding: 0;
+    }
+    
+}
+
+@media screen and (max-width: 644px) {
+    section * {
+        margin: 0;padding: 0;
+    }
+    
+    .welcome {
+        width: 650px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        left: 42px;
+    }
+    .welcome > * {
+        margin: 0px;
+    }
+
+    .main {
+        width: 90vw;
+        align-items: center;
+    }
+}
