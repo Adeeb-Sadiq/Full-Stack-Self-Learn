@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inserting and removing elements</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container red main">
+        <div class="box" data-createdby = "Adeeb">this is a box - 1</div>
+        <div class="box">this is a box</div>
+        <div class="box">this is a box</div>
+    </div>
+
+    <script>
+        // show userdefined attributes
+        console.log(document.querySelector(".box").dataset)
+        
+    // inserting a element
+        //appending
+        let div = document.createElement("div");
+        div.innerHTML = "This div is <b>created using javascript</b>";
+        div.setAttribute("class", "created");
+
+        document.querySelector(".container").append(div);
+        // similarly - prepend, after, before 
+
+        // insert adjacent 
+        document.querySelector(".container").insertAdjacentHTML("afterbegin","this is beforeend") // like prepend, beforebegin - before 
+        // - afterbegin, beforebegin, afterend, beforeend.
+
+    // removing the element
+        document.querySelector(".box").remove();
+        // removes the first box    
+
+    // class list and class name 
+        // console.clear()
+        const cont = document.querySelector(".container");
+        console.log(cont.classList);
+        console.log(cont.className);
+        // ****************************************
+        // classlist.  can be add, remove or toggle 
+        // will be use full to toggle dark theme 
+        cont.classList.toggle("red")
+        cont.classList.toggle("red")
+    </script>
+</body>
+</html>
