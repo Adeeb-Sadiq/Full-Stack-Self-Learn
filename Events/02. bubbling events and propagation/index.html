@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbling events and stopping propagation</title>
+    <style>
+        .child {
+            padding: 20px;
+            background-color: purple;
+            color: white;
+            height: 25px;
+        }
+        .childContainer {
+            padding: 20px;
+            background-color: yellow;
+        }
+        .container {
+            padding: 20px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="childContainer"> bubbling
+            <div class="child">This is child block | stoping the propagation</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
