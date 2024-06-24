@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 8px;
+    gap: 10px;
+}
+
+.left {
+    width: 25vw;
+    flex-direction: column;
+    gap: 10px;
+    height: 100vh;
+}
+
+.logo > img {
+    width: 80px;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav ul li {
+    display: flex;
+    align-items: center;
+    padding-top: 17px;
+    gap: 20px;
+    font-weight: bold;
+}
+
+.nav ul img {
+    width: 25px;
+}
+
+.library {
+    min-height: 70%;
+    position: relative;
+}
+
+.lib-header {
+    justify-content: space-between;
+}
+
+.lib-header img {
+    width: 25px;
+}
+
+.lib-header :first-child{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+}
+
+.lib-footer {
+    font-size: 12px;
+    font-weight: lighter;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: absolute;
+    bottom: 15px;
+}
+
+.right {
+    width: 75vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.right-buttons {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.right-buttons .arrows {
+    gap: 10px;
+}
+
+.right-buttons .arrows div {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.right-buttons .capsule {
+    gap: 20px;
+}
+
+.right-buttons .capsule button {
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    height: 30px;
+}
+
+.right-buttons .capsule .su {
+    background-color: inherit ;
+    color: white;
+}
+
+.right-buttons .capsule .li {
+    background-color: white;
+}
+
+.card-container {
+    margin-top: 15px;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 140px;
+    position: relative;
+    padding: 5px;
+}
+
+.card > * {
+    padding-top: 3px;
+}
+
+.card :first-child {
+    width: 100%;
+    object-fit: contain;
+}
+
+.card .play-button {
+    width: 50px;
+    position: absolute;
+    right: 3px;
+    top: 80px;
+}
+
+

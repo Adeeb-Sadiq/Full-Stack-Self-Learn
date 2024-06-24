@@ -1,0 +1,32 @@
+.border {
+    border: 1px solid red;
+}
+
+.flex {
+    display: flex;
+}
+
+.invert {
+    filter: invert(1);
+}
+
+.bg-black {
+    background-color: black;
+    color: white;
+}
+
+.bg-grey {
+    background-color: #121212;
+}
+
+.bg-light-grey {
+    background-color: #1e1e1e;
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+.p-1 {
+    padding: 20px;
+}
