@@ -13,7 +13,8 @@
     width: 25vw;
     flex-direction: column;
     gap: 10px;
-    height: 100vh;
+    height: 90vh;
+    justify-content: space-between;
 }
 
 .logo > img {
@@ -36,8 +37,12 @@
     width: 25px;
 }
 
+.home {
+    height: 25%;
+}
+
 .library {
-    min-height: 70%;
+    height: 75%;
     position: relative;
 }
 
@@ -63,17 +68,22 @@
     gap: 15px;
     position: absolute;
     bottom: 15px;
+    margin: 12px;
 }
 
 .right {
     width: 75vw;
     position: relative;
     overflow: hidden;
+    height: 90vh;
 }
 
 .right-buttons {
     justify-content: space-between;
+    align-items: center;
     width: 100%;
+    height: 65px;
+    padding: 0px 30px;
 }
 
 .right-buttons .arrows {
@@ -90,30 +100,36 @@
 }
 
 .right-buttons .capsule {
-    gap: 20px;
+    gap: 25px;
 }
 
 .right-buttons .capsule button {
     border: none;
     padding: 5px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: bolder;
     height: 30px;
 }
 
 .right-buttons .capsule .su {
     background-color: inherit ;
     color: white;
+    height: 45px;
 }
 
 .right-buttons .capsule .li {
     background-color: white;
+    border-radius: 25px;
+    width: 100px;
+    height: 45px;
 }
 
 .card-container {
     margin-top: 15px;
     gap: 5px;
     flex-wrap: wrap;
+    max-height: 60vh;
+    overflow: scroll;
 }
 
 .card {
@@ -138,4 +154,54 @@
     top: 80px;
 }
 
+.playbar {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: #1ed760;
+    padding: 10px;
+}
 
+.music-buttons {
+    justify-content: center;
+    gap: 20px;
+}
+
+.seekbar .seek {
+    height: 5px;
+    background-color: black;
+    width: 90%;
+    position: relative;
+}
+
+.seekbar {
+    padding-top: 20px;
+    justify-content: center;
+}
+
+.seek-pointer {
+    background-color: #fff;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 4px;
+    transition: left 0.5s;
+    left: 0%;
+}
+
+.musicList {
+    margin: 20px 0;
+    height: 77%;
+    overflow: scroll;
+}
+
+.song {
+    justify-content: space-between;
+}
+
+.song-name {
+    max-width: 70%;
+    max-height: 25px;
+    overflow: hidden;
+}
