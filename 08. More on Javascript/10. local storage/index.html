@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local storage example</title>
+</head>
+<body>
+    
+    <script>
+        let a
+        if(localStorage.getItem("name")) {
+            a = localStorage.getItem("name")
+            document.write("Welcome " + a)
+        } else {
+            a = prompt("Enter your name: ")
+            localStorage.setItem("name", a)
+            document.write("Welcome " + a)
+        }
+    </script>
+</body>
+</html>
