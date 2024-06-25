@@ -10,7 +10,7 @@
 }
 
 .left {
-    width: 25vw;
+    width: 30vw;
     flex-direction: column;
     gap: 10px;
     height: 90vh;
@@ -72,7 +72,7 @@
 }
 
 .right {
-    width: 75vw;
+    width: 70vw;
     position: relative;
     overflow: hidden;
     height: 90vh;
@@ -88,6 +88,9 @@
 
 .right-buttons .arrows {
     gap: 10px;
+    align-items: center;
+    height: 40px;
+    position: relative;
 }
 
 .right-buttons .arrows div {
@@ -205,8 +208,50 @@
 }
 
 .song-name {
-    max-width: 70%;
+    width: 70%;
     max-height: 25px;
     overflow: hidden;
     padding-top: 4px;
+    font-size: 20px;
+}
+
+.hamburger {
+    position: relative;
+    bottom: 5px;
+    right: 3px;
+    display: none;
+}
+
+.close {
+    display: none;
+}
+
+@media (max-width: 1300px) {
+    .left {
+        background-color: black;
+        position: absolute;
+        z-index: 1;
+        width: 90%;
+        left: -100%;
+        transition: all 0.5s ease;
+    }
+    .right {
+        width: 100%;
+    }
+    .hamburger {
+        display: block;
+    }
+    .close {
+        display: block;
+    }
+    .plus {
+        display: none;
+    }
+}
+
+@media (max-width: 380px) {
+    .song-name {
+        font-size: 15px;
+        padding-top: 7px;
+    }
 }

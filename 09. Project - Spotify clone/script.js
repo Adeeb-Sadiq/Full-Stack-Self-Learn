@@ -1,12 +1,15 @@
 console.log("Functionality");
 
 let currentsong = new Audio();
+let songs
 
 function playMusic(str) {
     currentsong.src = "/songs/" + str
     currentsong.play();
     play.src = "assets/pause.svg"
-    document.querySelector(".display-music").innerHTML = str
+    let displayName = str
+    // console.log(displayName);
+    document.querySelector(".display-music").innerHTML = displayName.replaceAll("%20", " ")
     document.querySelector(".display-duration").innerHTML = "00:00"
 }
 
@@ -41,7 +44,7 @@ async function getSongs() {
 
 async function main() {
     // get the song form the directory 
-    let songs = await getSongs()
+    songs = await getSongs()
     // console.log(songs);
 
     // get the music list layout form the html
@@ -97,6 +100,41 @@ async function main() {
         let per = (e.offsetX / e.target.getBoundingClientRect().width) * 100
         document.querySelector(".seek-pointer").style.left = per + "%";
         currentsong.currentTime = (currentsong.duration * per) / 100 
+    })
+
+    // hamburger event
+    document.querySelector(".hamburger").addEventListener("click", () => {
+        document.querySelector(".left").style.left = 0;
+    })
+
+    document.querySelector(".close").addEventListener("click", () => {
+        document.querySelector(".left").style.left = "-100%" ;
+    })
+    
+    next.addEventListener("click", () => {
+        // console.log("next");
+        // console.log(currentsong.src);
+        // console.log(songs.indexOf(currentsong.src.split("/").slice(-1)[0]));
+        let currentIndex = songs.indexOf(currentsong.src.split("/").slice(-1)[0])
+        // console.log(currentIndex);
+        let nextIndex = currentIndex + 1
+        // console.log(songs.length);
+        if(currentIndex == songs.length - 1){
+            playMusic(songs[0])
+        } else {
+            playMusic(songs[nextIndex])
+        }
+    })
+
+    previous.addEventListener("click", () => {
+        // console.log("previous");
+        let currentIndex = songs.indexOf(currentsong.src.split("/").slice(-1)[0])
+        let previousIndex = currentIndex - 1
+        if(previousIndex == -1) {
+            playMusic(songs[songs.length  -1])
+        } else {
+            playMusic(songs[previousIndex])
+        }
     })
 
 }
