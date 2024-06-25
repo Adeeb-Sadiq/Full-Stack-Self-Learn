@@ -160,6 +160,7 @@
     width: 100%;
     background-color: #1ed760;
     padding: 10px;
+    color: black;
 }
 
 .music-buttons {
@@ -198,10 +199,14 @@
 
 .song {
     justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    margin: 5px 0px;
 }
 
 .song-name {
     max-width: 70%;
     max-height: 25px;
     overflow: hidden;
+    padding-top: 4px;
 }

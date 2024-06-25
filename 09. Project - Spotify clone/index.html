@@ -24,8 +24,8 @@
 
                 <div class="nav">
                     <ul>
-                        <li><img src="assets/home.svg" alt="" class="invert">Home</li>
-                        <li><img src="assets/search.svg" alt="" class="invert">Search</li>
+                        <li class="pointer"><img src="assets/home.svg" alt="" class="invert">Home</li>
+                        <li class="pointer"><img src="assets/search.svg" alt="" class="invert">Search</li>
                     </ul>
                 </div>
             </div>
@@ -42,12 +42,12 @@
 
                 <div class="musicList ">
 
-                    <div class="song flex">
+                    <div class="song flex pointer">
                         <div class="song-photo">
                             <img class="invert" src="assets/music-note-03-stroke-rounded.svg" alt="">
                         </div>
                         <div class="song-name">
-                            This is a song 
+                            This is a song
                         </div>
                         <div class="song-play">
                             <img class="music-play invert" src="assets/play-stroke.svg" alt=""> 
@@ -71,7 +71,7 @@
         <div class="right bg-light-grey rounded">
 
             <div class="right-buttons flex bg-grey">
-                <div class="arrows flex">
+                <div class="arrows flex pointer">
                     <div class="flex bg-light-grey">
                         <img src="assets/left-arrow.svg" alt="" class="invert">
                     </div>
@@ -80,8 +80,8 @@
                     </div>
                 </div>
                 <div class="capsule flex">
-                    <button class="su">Sign up</button>
-                    <button class="li">Log in</button>
+                    <button class="su pointer">Sign up</button>
+                    <button class="li pointer">Log in</button>
                 </div>
             </div>
 
@@ -105,13 +105,18 @@
             </div>
 
             <div class="playbar">
+                <div class="display-info">
+                    <div class="display-music"></div>
+                    <div class="display-duration"></div>
+                </div>
+                
                 <div class="music-buttons flex">
-                    <img class="music-previous" src="assets/previous-stroke-rounded.svg" alt="">
-                    <img class="music-play" src="assets/play-stroke.svg" alt="">
-                    <img class="music-next" src="assets/next-stroke-rounded.svg" alt="">
+                    <img id="previous" class="music-previous pointer" src="assets/previous-stroke-rounded.svg" alt="">
+                    <img id="play" class="music-play pointer" src="assets/play-stroke.svg" alt="">
+                    <img id="next" class="music-next pointer" src="assets/next-stroke-rounded.svg" alt="">
                 </div>
                 <div class="seekbar flex">
-                    <div class="seek">
+                    <div class="seek rounded pointer">
                         <div class="seek-pointer"></div>
                     </div>
                 </div>
