@@ -51,7 +51,7 @@
                             This is a song
                         </div>
                         <div class="song-play">
-                            <img class="music-play invert" src="assets/play-stroke.svg" alt=""> 
+                            <img class="music-play invert" src="assets/play-stroke.svg" alt="">
                         </div>
                     </div>
 
@@ -90,10 +90,19 @@
             </div>
 
             <div class="playlist p-1">
-                <h2>Playlist</h2>
+                <h2>Playlists</h2>
 
                 <div class="card-container flex">
 
+                    <div class="card">
+                        <img src="https://i.scdn.co/image/ab67706f00000002d497c6e15e12d5ff9df6e5f9" alt="" class="rounded">
+
+                        <img src="assets/play-circle-rounded.svg" alt="" class="play-button">
+
+                        <h3>Dinner Jazz</h3>
+                        <p>The Gentle Sound...</p>
+                    </div>
+                    
                     <div class="card">
                         <img src="https://i.scdn.co/image/ab67706f00000002d497c6e15e12d5ff9df6e5f9" alt=""
                             class="rounded">
@@ -109,21 +118,34 @@
             </div>
 
             <div class="playbar">
-                <div class="display-info">
-                    <div class="display-music"></div>
-                    <div class="display-duration"></div>
+
+                <div class="pb">
+                    <div class="display-info">
+                        <div class="display-music"></div>
+                        <div class="display-duration"></div>
+                    </div>
+    
+                    <div class="volume-control flex">
+                        <img class="volume-img" src="assets/volume.svg" alt="">
+                        <input type="range" class="range">
+                    </div>
                 </div>
-                
+
+
                 <div class="music-buttons flex">
                     <img id="previous" class="music-previous pointer" src="assets/previous-stroke-rounded.svg" alt="">
                     <img id="play" class="music-play pointer" src="assets/play-stroke.svg" alt="">
                     <img id="next" class="music-next pointer" src="assets/next-stroke-rounded.svg" alt="">
                 </div>
+
+
                 <div class="seekbar flex">
                     <div class="seek rounded pointer">
                         <div class="seek-pointer"></div>
                     </div>
                 </div>
+
+
             </div>
         </div>
 

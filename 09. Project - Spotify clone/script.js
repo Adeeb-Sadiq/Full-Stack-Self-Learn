@@ -137,6 +137,12 @@ async function main() {
         }
     })
 
+    // volume controls
+    document.querySelector(".volume-control").getElementsByTagName("input")[0].addEventListener("change", (e) => {
+        // console.log(e.target.value)
+        currentsong.volume = parseInt(e.target.value) / 100
+    })
+
 }
 
 main()
