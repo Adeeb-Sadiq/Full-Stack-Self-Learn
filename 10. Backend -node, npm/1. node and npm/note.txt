@@ -1,0 +1,17 @@
+by default the node code is wrapped in :
+
+(function(exports, require, module, __filename, __ dirname) {
+
+
+
+});
+
+so we have access to require and exports by default
+
+
+earlier used :
+    const var = require("module")
+
+now: (by adding type as module in package json file)
+    import var from "module"
+
