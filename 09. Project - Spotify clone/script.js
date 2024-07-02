@@ -2,6 +2,44 @@ console.log("Functionality");
 
 let currentsong = new Audio();
 let songs
+let albums = []
+
+async function createCard(e) {
+    // console.log(e);
+    let cover, title, description
+    let link = e
+    let data = await fetch(e)
+    let text = await data.text();
+    // console.log(text);
+    let temp = document.createElement("div")
+    temp.innerHTML = text
+    let a = temp.querySelectorAll("a").forEach(e => {
+        // console.log(e.href);
+        if(e.href.includes("cover.jpg")) {
+            cover = e.href
+            // console.log(e.href);
+        }
+        
+    });
+    
+
+
+
+
+
+
+    const cardContainer = document.querySelector(".card-container");
+    let div = document.createElement("div")
+    div.setAttribute("class", "card")
+    div.innerHTML = 
+    `
+        <img src="${cover}" alt="" class="rounded">
+
+        <h3>${title}</h3>
+        <p>${description}</p>
+    `
+    cardContainer.append(div)
+}
 
 function playMusic(str) {
     currentsong.src = "/songs/" + str
@@ -26,6 +64,24 @@ function secondsToMinutes(seconds) {
 
 async function getSongs() {
     let data = await fetch("http://192.168.0.112:3000/songs/")
+    let text = await data.text()
+    // console.log(text);
+    let div = document.createElement("div")
+    div.innerHTML = text
+    let a = div.getElementsByTagName("a")
+    // console.log(a);
+    let songs = []
+    div.querySelectorAll("a").forEach(e => {
+        if (e.href.endsWith(".mp3")) {
+            songs.push(e.href.split("/songs/")[1])
+        }
+    });
+    // console.log(songs);
+    return songs
+}
+
+async function getAlbumSongs(folder) {
+    let data = await fetch(`http://192.168.0.112:3000/songs/${folder}`)
     let text = await data.text()
     // console.log(text);
     let div = document.createElement("div")
@@ -96,7 +152,7 @@ async function main() {
 
     // event listener for seekbar
     document.querySelector(".seek").addEventListener("click", e => {
-        console.log(e.target.getBoundingClientRect(), e.offsetX);
+        // console.log(e.target.getBoundingClientRect(), e.offsetX);
         let per = (e.offsetX / e.target.getBoundingClientRect().width) * 100
         document.querySelector(".seek-pointer").style.left = per + "%";
         currentsong.currentTime = (currentsong.duration * per) / 100 
@@ -143,7 +199,30 @@ async function main() {
         currentsong.volume = parseInt(e.target.value) / 100
     })
 
+    albums = await getAlbums()
+    // console.log(albums);
+    albums.forEach(e => {
+        // console.log(e.href);
+        createCard(e.href)
+    })
+
 }
+
+async function getAlbums() {
+    let data = await fetch("http://192.168.0.112:3000/songs/")
+    let text = await data.text();
+    // console.log(text);
+    let div = document.createElement("div")
+    div.innerHTML = text
+    let a = div.getElementsByTagName("a")
+    div.querySelectorAll("a").forEach(e => {
+        if(e.href.includes("songs")) {
+            albums.push(e)
+        }
+    })
+    return albums
+}
+
 
 main()
 
