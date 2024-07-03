@@ -63,7 +63,7 @@ function secondsToMinutes(seconds) {
 
 
 async function getSongs() {
-    let data = await fetch("http://192.168.0.112:3000/songs/")
+    let data = await fetch("http://192.168.0.112:3000/songs/anime%20music/")
     let text = await data.text()
     // console.log(text);
     let div = document.createElement("div")
@@ -100,7 +100,7 @@ async function getAlbumSongs(folder) {
 
 async function main() {
     // get the song form the directory 
-    songs = await getSongs()
+    songs = await getSongs("http://192.168.0.112:3000/songs/anime%20music/")
     // console.log(songs);
 
     // get the music list layout form the html
@@ -199,12 +199,12 @@ async function main() {
         currentsong.volume = parseInt(e.target.value) / 100
     })
 
-    albums = await getAlbums()
-    // console.log(albums);
-    albums.forEach(e => {
-        // console.log(e.href);
-        createCard(e.href)
-    })
+    // albums = await getAlbums()
+    // // console.log(albums);
+    // albums.forEach(e => {
+    //     // console.log(e.href);
+    //     createCard(e.href)
+    // })
 
 }
 
