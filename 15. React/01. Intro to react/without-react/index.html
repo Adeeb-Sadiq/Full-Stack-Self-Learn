@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter - without react</title>
+</head>
+<body>
+    <div id="counter">0</div>
+    <button id="counterBtn">click me</button>
+
+
+    <script>
+        document.querySelector("#counterBtn").addEventListener("click",()=> {
+            let c = parseInt(document.querySelector("#counter").innerHTML)
+            document.querySelector("#counter").innerHTML = c + 1
+        })
+    </script>
+</body>
+</html>
