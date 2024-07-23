@@ -99,11 +99,12 @@ const Passwords = () => {
                             {item.username}
                             </span>
                             </div>
-                            <div className='flex gap-3 sm:justify-around sm:w-1/3 sm:text-center'>
-                                <div><span className='sm:hidden'>Password: </span>
-                                <span onClick={handleCopy} className='cursor-pointer'>
-                                {item.password}
-                                </span>
+                            <div className='flex sm:pl-20 sm:pr-8 gap-3 sm:justify-between sm:w-1/3 sm:text-center'>
+                                <div>
+                                    <span className='sm:hidden'>Password: </span>
+                                    <span onClick={handleCopy} className='cursor-pointer'>
+                                        {item.password}
+                                    </span>
                                 </div>
                                 <img onClick={(e) => handleDelete(e, item.id)} className='invert w-5' src="src\assets\delete.svg" alt="" />
                             </div>
