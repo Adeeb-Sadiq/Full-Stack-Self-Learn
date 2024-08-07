@@ -7,7 +7,7 @@ let currentsong = new Audio()
 
 // getting directories
 async function getFolders() {
-    let raw = await fetch("http://192.168.0.112:3000/songs/")
+    let raw = await fetch("http://127.0.0.1:3000/songs/")
     let data = await raw.text()
     let div = document.createElement("div")
     div.innerHTML = data
