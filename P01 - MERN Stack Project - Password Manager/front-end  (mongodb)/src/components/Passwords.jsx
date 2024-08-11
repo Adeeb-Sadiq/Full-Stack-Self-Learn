@@ -4,6 +4,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import { v4 as uuidv4 } from 'uuid';
 import 'react-toastify/dist/ReactToastify.css';
 
+const PORT = 3100
+
 
 const Passwords = () => {
 
@@ -12,7 +14,7 @@ const Passwords = () => {
     const visibility = useRef()
 
     const getPasswords = async () => {
-        let req = await fetch('http://localhost:3000/')
+        let req = await fetch(`http://localhost:${PORT}/`)
         let Passwords = await req.json()
         setPasswords(Passwords)
         console.log(Passwords)
@@ -40,7 +42,7 @@ const Passwords = () => {
     const submitForm = async () => {
         if (form.username.length > 0 && form.url.length > 0 && form.password.length > 0) {
             setPasswords([...passwords, form])
-            let res = await fetch("http://localhost:3000/", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(form)})
+            let res = await fetch(`http://localhost:${PORT}/`, {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(form)})
             setForm({ id: " ", username: "", url: "", password: "" })
             // localStorage.setItem('securepasswords', JSON.stringify([...passwords, form]))
         } else {
@@ -55,7 +57,8 @@ const Passwords = () => {
                 return item.id !== id
             })
             setPasswords(newPasswords)
-            let res = await fetch("http://localhost:3000/", {method: "DELETE", headers: {"Content-Type": "application/json"}, body: JSON.stringify({id})})
+            console.log(id)
+            let res = await fetch(`http://localhost:${PORT}/`, {method: "DELETE", headers: {"Content-Type": "application/json"}, body: JSON.stringify({id})})
             // localStorage.setItem('securepasswords', JSON.stringify(newPasswords))
         }
     }
@@ -67,7 +70,7 @@ const Passwords = () => {
 
 
     return (
-        <div className='flex flex-col items-center gap-3 xl:w-[1280px] xl:m-auto'>
+        <div className='flex flex-col items-center gap-3 xl:w-[1280px] xl:m-auto mb-11'>
             <ToastContainer />
             {/* Same as */}
             <ToastContainer />
